@@ -2,7 +2,7 @@
 
 sudo apt install curl -y
 echo deb https://downloads.plex.tv/repo/deb public main | sudo tee /etc/apt/sources.list.d/plexmediaserver.list
-sudo apt update -y sudo apt full-upgrade -y
+sudo apt update sudo apt full-upgrade -y
 sudo apt install plexmediaserver -y
 
 sudo mv plexmediaserver /etc/ufw/applications.d/plexmediaserver
