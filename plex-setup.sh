@@ -26,4 +26,4 @@ mkdir pictures
 mkdir music
 
 clear
-echo "head to the static ip port 32400 to start working on settings."
+echo "head to 192.168.1.xxx:32400/web to start working on settings."
