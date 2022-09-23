@@ -13,11 +13,9 @@ sudo ufw app update plexmediaserver
 
 sudo ufw allow plexmediaserver-all
 
-clear
-echo "double check that this looks right"
-sudo ufw status verbose
-echo "enter when done"
-read waiting
+sudo systemctl enable plexmediaserver.service
+
+sudo ufw allow 32400
 
 cd 
 mkdir plex
@@ -28,4 +26,4 @@ mkdir pictures
 mkdir music
 
 clear
-echo "head to the static ip to start working on settings."
+echo "head to the static ip port 32400 to start working on settings."
