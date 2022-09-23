@@ -1,8 +1,10 @@
 #!/bin/bash
 
-sudo apt install curl -y
+sudo apt install wget curl gpg gnupg2 software-properties-common apt-transport-https lsb-release ca-certificates -y
 echo deb https://downloads.plex.tv/repo/deb public main | sudo tee /etc/apt/sources.list.d/plexmediaserver.list
-sudo apt update sudo apt full-upgrade -y
+wget https://downloads.plex.tv/plex-keys/PlexSign.key
+cat  PlexSign.key | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/PlexSigkey.gpg
+sudo apt update
 sudo apt install plexmediaserver -y
 
 sudo mv plexmediaserver /etc/ufw/applications.d/plexmediaserver
